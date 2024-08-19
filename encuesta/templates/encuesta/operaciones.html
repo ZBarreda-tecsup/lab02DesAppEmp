@@ -1,0 +1,18 @@
+<h2>{{titulo}}</h2>
+<form action="{% url 'encuesta:operador' %}" method="POST">
+    {% csrf_token %}
+    primer valor (en caso de resta o divición este debe ser el mayor):<br>
+    <input type="number" name="numero1" id="numero1"><br>
+    segundo valor:<br>
+    <input type="number" name="numero2" id="numero2"><br>
+    operacion:
+    <select name="operacion" id="operacion">
+        <option value="suma">Suma</option>
+        <option value="resta">Resta</option>
+        <option value="multiplicacion">Multiplicación</option>
+        <option value="division">División</option>
+    </select><br>
+    <input type="submit" name="submit" value="Enviar">
+</form>
+
+

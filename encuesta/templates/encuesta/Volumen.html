@@ -1,0 +1,10 @@
+<h1>{{titulo}}</h1>
+
+<form action="{% url 'encuesta:calcular' %}" method="POST">
+    {% csrf_token %}
+    <label for="diametro">Introduzca el diámetro en metros</label>
+    <input type="any" id="diametro" name="diametro"></br>
+    <label for="altura">Introduzca la altura en metros</label>
+    <input type="any" id="altura" name="altura"></br>
+    <input type="submit" value="Calcular">
+</form>
